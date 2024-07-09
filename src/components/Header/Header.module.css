@@ -1,0 +1,225 @@
+/*.headerLine {
+  width: 100%;
+  height: 50px;
+  background: #7AC751;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+}
+
+.headerLine__text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}*/
+
+header {
+  position: sticky;
+  top: -16px;
+  z-index: 11;
+  background: #fff;
+}
+
+.headerBlock {
+  width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.logoBlock {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.logoBlock h1 {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.logoIcon {
+  width: 28px;
+  margin-right: 8px;
+}
+
+.searchBlock {
+  width: 472px;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  height: 46px;
+  width: 100%;
+  border: 2px solid #7AC751;
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+  padding: 0 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: rgb(0, 0, 0);
+}
+
+.search::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #B0B0B0;
+}
+
+.searchDeleteBtn {
+  width: 30px;
+  height: 46px;
+  border-top: 2px solid #7AC751;
+  border-bottom: 2px solid #7AC751;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #666666;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.searchDeleteBtn:hover {
+  font-size: 32px;
+}
+
+.searchBtn {
+  width: 48px;
+  height: 46px;
+  background: #7AC751;
+  border-radius: 0px 8px 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cartBlock {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cartBlock:hover {
+  opacity: 0.8;
+}
+
+.cart {
+  display: flex;
+  position: relative;
+  margin-right: 10px;
+}
+
+.amountCart {
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50px;
+  background: #7AC751;
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  z-index: 10;
+  position: absolute;
+  top: -8px;
+  left: -14px;
+}
+
+.cartIcon {
+  width: 24px;
+  z-index: 8;
+}
+
+.cartTotal {
+  font-size: 18px;
+  line-height: 17px;
+  margin-right: 20px;
+}
+
+.openBtns {
+  display: flex;
+  background: #7AC751;
+  border-radius: 8px;
+  padding: 6px 0;
+}
+
+.searchBtnOpen {
+  width: 52px;
+  height: 30px;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  display: none;
+  border-right: 1px solid #ffffff33;
+}
+
+.filtersBtnOpen {
+  width: 52px;
+  height: 30px;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  display: none;
+  border-left: 1px solid #ffffff33;
+}
+
+.openBtns {
+  display: none;
+}
+
+
+
+@media screen and (max-width: /*640*/768px) {
+  .openBtns {
+    display: flex;
+  }
+
+  .logoBlock {
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .logoBlock h1 {
+    display: none;
+  }
+
+  .searchBlock {
+    display: none;
+    padding: 0 10px;
+  }
+
+  .searchBtnOpen,
+  .filtersBtnOpen {
+    display: flex;
+  }
+
+  .cartTotal {
+    display: none;
+  }
+
+  .cartBlock {
+    width: auto;
+    margin-right: 0;
+  }
+}
+

@@ -1,0 +1,105 @@
+.card {
+  width: 260px;
+  display: inline-block;
+  padding: 0 0 8px 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  border: 1px solid #57b127;
+}
+
+.iconBlock {
+  width: 100%;
+  height: 260px;
+}
+
+.icon {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 4px 0 4px;
+}
+
+.rate_star_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.block_icon {
+  display: flex;
+  font-size: 18px;
+  color: #95dd6f;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+  color: #555;
+  font-size: 20px;
+}
+
+.newPrice {
+  color: #7ac751;
+  font-size: 18px;
+}
+
+.oldPrice {
+  color: #ccc;
+  font-size: 18px;
+  text-decoration-line: line-through;
+  margin-left: 8px;
+}
+
+.btn:hover .btn_title {
+  color: #57b127;
+  text-decoration-line: underline;
+}
+
+.btn_icon::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #7ac751;
+  border-radius: 50%;
+  margin-left: -5px;
+  margin-top: 9px;
+  z-index: 10;
+}
+
+.btn_icon::after {
+  width: 2px;
+  height: 12px;
+  content: "";
+  position: absolute;
+  background: #7ac751;
+  border-radius: 50%;
+  margin-top: 4px;
+  z-index: 10;
+}
+
+.btn_title {
+  color: #7ac751;
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+
+@media screen and (max-width: 768px) {
+	.card {
+    width: 100%;
+  }
+
+  .card:hover {
+    border: 1px solid transparent;
+  }
+}

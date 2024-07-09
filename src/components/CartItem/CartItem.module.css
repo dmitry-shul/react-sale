@@ -1,0 +1,97 @@
+.productItem {
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 7px solid #dadada;
+  border-bottom-color: #7AC751;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.thumbnail {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 12px;
+}
+
+.itemInfo {
+  width: 100%;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newPrice {
+  color: #7AC751;
+  font-size: 18px;
+}
+
+.oldPrice {
+  color: #CCC;
+  font-size: 18px;
+  text-decoration-line: line-through;
+  margin-left: 8px;
+}
+
+.delete_can {
+  width: 34px;
+  cursor: pointer;
+}
+
+.priceBlock {
+  display: flex;
+  margin-left: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+	.productItem {
+    padding-right: 0;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .thumbnail {
+    width: 100%;
+    margin: 0;
+  }
+
+  .itemInfo {
+    margin-left: 0;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+
+  .itemInfo div {
+    width: 50%;
+  }
+
+  .priceBlock {
+    display: flex;
+    margin-left: 0;
+  }
+}

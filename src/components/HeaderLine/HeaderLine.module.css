@@ -1,0 +1,23 @@
+.headerLine {
+  width: 100%;
+  height: 50px;
+  background: #7AC751;
+  color: #ffffff;
+}
+
+.headerLine__text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+
+@media screen and (max-width: /*640*/768px) {
+  .headerLine__text {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+}

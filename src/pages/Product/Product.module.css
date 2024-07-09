@@ -1,0 +1,212 @@
+.productBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 20px 0;
+}
+
+.imagesBlock {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+} 
+
+.thumbnail {
+  min-width: 400px;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.image {
+  width: 210px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+.image:hover {
+  opacity: 0.8;
+}
+
+.description {
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.newPrice {
+  color: #7AC751;
+  font-size: 18px;
+}
+
+.oldPrice {
+  color: #CCC;
+  font-size: 18px;
+  text-decoration-line: line-through;
+  margin-left: 8px;
+}
+
+.rate_star_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.block_icon {
+  display: flex;
+  font-size: 18px;
+  color: #95DD6F;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.btn:hover .btn_title {
+  color: #57b127;
+  text-decoration-line: underline;
+}
+
+.description__titleAndBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn_icon::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #7AC751;
+  border-radius: 50%;
+  margin-left: -5px;
+  margin-top: 9px;
+  z-index: 10;
+}
+
+.btn_icon::after {
+  width: 2px;
+  height: 12px;
+  content: "";
+  position: absolute;
+  background: #7AC751;
+  border-radius: 50%;
+  margin-top: 4px;
+  z-index: 10;
+}
+
+.btn_title {
+  color: #7AC751;
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 7px solid #dadada;
+  border-bottom-color: #7AC751;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+@media screen and (max-width: 768px) {
+  .productBlock {
+    margin: 10px 0 10px 0;
+  }
+
+  .imagesBlock {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .images {
+    row-gap: 6px;
+    column-gap: 6px;
+  }
+
+  .image {
+    max-width: 130px;
+    width: 32%;
+    height: 70px;
+    border-radius: 10px;
+    cursor: default;
+  }
+
+  .description__titleAndBtn {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn {
+    cursor: default;
+    margin: 16px 0 10px 0;
+    background: #7AC751;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  .btn p {
+    color: #fff;
+    margin-left: 24px;
+  }
+
+  .btn_icon::before {
+    background: #ffffff;
+    margin-left: 5px;
+  }
+  
+  .btn_icon::after {
+    background: rgb(255, 255, 255);
+    margin-left: 10px;
+  }
+
+  .btn:hover .btn_title {
+    color: rgb(255, 255, 255);
+    text-decoration-line: none;
+  }
+
+  .btn:active {
+    transform: scale(0.96);
+  }
+}
