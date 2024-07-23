@@ -32,7 +32,7 @@ const CategoryFilter = (data, category) => {
 const SearchFilter = (data, searchValue) => {
   return useMemo(() => {
     if(searchValue === "") return data
-    return data.filter(dt => dt.title.toLowerCase().includes(searchValue?.toLowerCase()) || dt.brand.toLowerCase().includes(searchValue?.toLowerCase()))
+    return data.filter(dt => dt.title?.toLowerCase().includes(searchValue?.toLowerCase()) || dt.brand?.toLowerCase().includes(searchValue?.toLowerCase()))
   }, [data, searchValue])
 }
 
